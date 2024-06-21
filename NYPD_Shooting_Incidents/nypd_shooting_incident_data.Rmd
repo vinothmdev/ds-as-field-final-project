@@ -71,6 +71,7 @@ cat(table_types)
 
 ```{r}
 data[data==""]<-NA
+data[data=="(null)"]<-NA
 data_filtered <- data %>% select(OCCUR_DATE, OCCUR_TIME, BORO,STATISTICAL_MURDER_FLAG,
                                  PERP_AGE_GROUP, PERP_SEX, PERP_RACE,
                                  VIC_AGE_GROUP, VIC_SEX, VIC_RACE, Latitude, Longitude) %>%
